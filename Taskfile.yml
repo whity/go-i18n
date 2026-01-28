@@ -1,0 +1,14 @@
+version: 3
+
+tasks:
+  test:
+    desc: "Run tests"
+    cmds:
+      - go test $(go list ./... | grep -v playground) -count=1 -cover {{ .CLI_ARGS }} ./...
+
+  coverage:
+    desc: "Run tests with coverage report"
+    cmds:
+      - go test $(go list ./... | grep -v playground) -count=1 -cover -coverprofile=/tmp/go-i18n.out ./...
+      - go tool cover -html=/tmp/go-i18n.out -o /tmp/go-i18n.html
+      - open /tmp/go-i18n.html
