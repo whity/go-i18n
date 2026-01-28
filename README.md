@@ -1,3 +1,6 @@
+![go workflow](https://github.com/whity/go-i18n/actions/workflows/go.yml/badge.svg)
+
+
 ## Contributing
 
 1. Fork it ( https://github.com/[your-github-name]/i18n/fork )
